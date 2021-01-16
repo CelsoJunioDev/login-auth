@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>Login - NPL</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #5f7c8a;
+    }
+    div {
+      background-color: #fff;
+      max-width: 500px;
+      width: 70%;
+      padding: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    div h3 {
+      text-align: center;
+      color: #5f7c8a;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    div input[type="text"],
+    div input[type="password"] {
+      width: 100%;
+      height: 45px;
+      border: 1px solid #ccc;
+      padding-left: 10px;
+      margin: 5px 0;
+    }
+    div input[type="text"]:focus,
+    div input[type="password"]:focus {
+      outline: 0;
+    }
+
+    div input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      background-color: #5f7c8a;
+      color: #fff;
+      border: 0;
+      border-radius: 20px;
+      transition: 0.5s;
+    }
+    div input[type="submit"]:hover {
+      background-color: #4a5f6a;
+    }
+  </style>
+  <body>
+    <div>
+      <h3>Faça login</h3>
+      <input id="email" type="text" name="email" placeholder="Seu e-mail.." />
+      <input
+        id="password"
+        type="password"
+        name="senha"
+        placeholder="Sua senha.."
+      />
+      <input
+        id="enviar"
+        type="submit"
+        name="acao"
+        placeholder="Enviar"
+        onclick="logar()"
+      />
+    </div>
+
+    <script>
+      function setLocalStorage() {
+        localStorage.setItem("isLogado", "true");
+      }
+
+      function logar() {
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (email != "teste@teste.com" || password != "mecontrata") {
+          alert("Dados incorretos");
+        } else {
+          setLocalStorage();
+          window.location.href = "home.html";
+        }
+      }
+
+      function getLocalStorage() {
+        var isLogado = localStorage.getItem("isLogado");
+
+        if (isLogado === "true") {
+          window.location.href = "home.html";
+        }
+      }
+
+      getLocalStorage();
+    </script>
+  </body>
+</html>

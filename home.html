@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Login - NPL</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #5f7c8a;
+    }
+
+    form h3 {
+      text-align: center;
+      color: #5f7c8a;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <body>
+    <h3>Usuário logado!</h3>
+    <a href="index.html" onclick="logout()">Sair</a>
+
+    <script>
+      function logout() {
+        localStorage.setItem("isLogado", "false");
+      }
+      function getLocalStorage() {
+        var isLogado = localStorage.getItem("isLogado");
+
+        if (isLogado === "true") {
+          //   alert("TÁ LOGADO");
+        } else {
+          window.location.href = "index.html";
+        }
+      }
+      getLocalStorage();
+    </script>
+  </body>
+</html>
