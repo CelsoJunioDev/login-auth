@@ -32,9 +32,9 @@ Este repositório foi criado para atender aos requisitos de um teste imposto por
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
-- [HTML5](https://pt-br.reactjs.org/)
-- [Javascript](https://firebase.google.com/)
-- [CSS](https://styled-components.com/)
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Javascript](https://www.javascript.com/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [VS Code](https://code.visualstudio.com/)
 
 ## :books: Requisitos
