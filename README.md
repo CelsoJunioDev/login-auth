@@ -19,7 +19,7 @@
 </p>
 
 <h1 align="center">
-  <img alt="Home" src="screenshot.png" height="800" />
+  <img alt="Home" src="screenshot.png" width="800" />
   
 </h1>
 
