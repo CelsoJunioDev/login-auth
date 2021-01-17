@@ -6,22 +6,33 @@
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     body {
+      
       background-color: #5f7c8a;
+      display: flex;    
+      align-items: center;
+      justify-content: center;
+    
+    }
+    .logout{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    form h3 {
-      text-align: center;
-      color: #5f7c8a;
+    h1 {
+      color: #000;
       font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     }
   </style>
   <body>
-    <h3>Usuário logado!</h3>
+    <div class="logout">
+    <h1>Usuário logado!</h1>
+
     <a href="index.html" onclick="logout()">Sair</a>
+    </div>
 
     <script>
       function logout() {
